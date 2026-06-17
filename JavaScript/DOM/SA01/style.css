@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #180018, #442a66);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background: #2A114B; 
+    padding: 35px;
+    border-radius: 15px;
+    width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    text-align: center;
+    color: #FAE5D8;
+}
+
+#person {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #FAE5D8;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.card input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #FAE5D8;
+    color: #180018;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #522959;
+    color: #FAE5D8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+     background: #2A114B;
+    color: #7a1b7a;
+}
+
+#addtelefone {
+    width: 40px;
+    margin-top: 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 5px;
+    background: #824D69;
+}
+
+.icone {
+    position: relative;
+    float: right;
+    margin-top: -32px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#mensagemNome,
+#mensagemEmail,
+#mensagemTelefone,
+#mensagemEndereco,
+#mensagemSenha,
+#mensagemConfirmar,
+#mensagemCadastrar {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #DFB6B2; 
+}
+
+#botaoSenha,
+#botaoConfirmar {
+    color: #2A114B;
+    font-size: 20px;
+}
+
+#botaoSenha:hover,
+#botaoConfirmar:hover {
+    color: #824D69;
+    cursor: pointer;
+}
+
+#telefones div {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+#telefones button {
+    width: 40px;
+    background: #824D69;
+    color: #FAE5D8;
+    border-radius: 8px;
+}

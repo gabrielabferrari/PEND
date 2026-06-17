@@ -1,0 +1,15 @@
+Quais melhorias foram realizadas?
+
+No site original, havia poucas notícias, o visual era simples e não funcionava bem em celulares. Na nova versão, eu mudei a fonte para uma mais agradável de ler, melhorei o design do site, organizei melhor as informações e adicionei mais notícias. Também permiti a navegação entre diferentes telas do portal, tornando o site mais completo.
+
+Quais elementos semân	ticos foram utilizados?
+
+Utilizei as tags <header>, <nav>, <main>, <section> e <footer>. Elas ajudam a organizar melhor o código e deixam a estrutura da página mais clara.
+
+Quais Media Queries foram implementadas?
+
+Implementei Media Queries para que o site se adapte a diferentes tamanhos de tela. Assim, ele funciona corretamente em computadores, tablets e celulares, reorganizando o conteúdo quando necessário.
+
+Quais decisões de UX e UI foram adotadas?
+
+Escolhi uma paleta de cores em vermelho, preto e branco para deixar o visual mais parecido com um portal de notícias. Também organizei melhor as notícias, deixei a navegação mais simples, adicionei ícones para facilitar o uso e incluí o modo escuro para melhorar a experiência do usuário.
