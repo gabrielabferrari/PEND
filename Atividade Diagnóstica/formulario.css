@@ -1,0 +1,36 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label{
+    font-weight: 500;
+    color: #7C3AED;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #E9DDFC;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: #FAF8FF;
+}
+
+input:focus,
+textarea:focus{
+    border-color: #7C3AED;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.btn-contato{
+    width: fit-content;
+    align-self: flex-start;
+    text-decoration: none;
+}

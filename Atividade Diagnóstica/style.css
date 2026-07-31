@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #FAF8FF, #F3EEFF);
+    color: #4B4453;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Cabeçalho */
+
+.perfil{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.foto-perfil{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #C4B5FD;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, .15);
+    margin-bottom: 20px;
+}
+
+.perfil h1{
+    font-size: 3rem;
+    color: #7C3AED;
+}
+
+.perfil h2{
+    color: #7A7288;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+/* Cards */
+
+.card{
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, .08);
+}
+
+.card h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #7C3AED;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E9DDFC;
+}
+
+.card h3 i{
+    font-size: 1.3rem;
+}
+
+.card p{
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.card strong{
+    color: #7C3AED;
+}
+
+/* Sobre */
+
+.sobre{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.texto{
+    flex: 1;
+}
+
+.sobre img{
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(124,58,237,.12);
+}
+
+/* Lista */
+
+.card ul{
+    list-style: none;
+}
+
+.card li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.card li i{
+    color: #7C3AED;
+    font-size: 1.2rem;
+}
+
+/* Galeria */
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.galeria img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(124,58,237,.08);
+}
+
+.galeria img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(124,58,237,.18);
+}
+
+.btn-contato{
+    background-color: #7C3AED;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s ease;
+    box-shadow: 0 5px 15px rgba(124, 58, 237, .2);
+}
+
+.btn-contato:hover{
+    background-color: #6D28D9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, .3);
+}
+
+.btn-contato:active{
+    transform: scale(.98);
+}
+
+.botao{
+    text-align: center;
+    margin: 40px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label{
+    font-weight: 500;
+    color: #7C3AED;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #E9DDFC;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: #FAF8FF;
+}
+
+input:focus,
+textarea:focus{
+    border-color: #7C3AED;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.btn-contato{
+    width: fit-content;
+    align-self: flex-start;
+    text-decoration: none;
+}   
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label{
+    margin-bottom: 8px;
+    color: #7C3AED;
+    font-weight: 500;
+}
+
+.campo input{
+    padding: 14px;
+    border: 2px solid #d9c9ff;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: #faf8ff;
+}
+
+.campo input:focus{
+    border-color: #7C3AED;
+}
+
+.btn-contato{
+    margin-top: 10px;
+    width: fit-content;
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+    .perfil h1{
+        font-size: 2.3rem;
+    }
+
+    .sobre{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .sobre img{
+        width: 220px;
+        height: 280px;
+    }
+
+    .card{
+        padding: 22px;
+    }
+
+}
