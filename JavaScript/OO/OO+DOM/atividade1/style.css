@@ -72,3 +72,32 @@ button:hover {
 
     color: #4b2e22;
 }
+
+/* Cada produto vira um card separado */
+#resultado div {
+    border-bottom: 1px solid #d8c2b3;
+    padding: 12px 0;
+}
+
+#resultado div:last-child {
+    border-bottom: none;
+}
+
+/* Botão Excluir */
+#resultado button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+
+    background-color: #b34a3c;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#resultado button:hover {
+    background-color: #8f352a;
+}

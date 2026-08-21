@@ -25,7 +25,7 @@ class Produto {
     //             </div>
     //             `;
     //         }
-        }
+}
 
 class Produtos {
     constructor() {
@@ -36,33 +36,46 @@ class Produtos {
         this.produtos.push(produto);
     }
 
+    excluirProduto(index) {
+        this.produtos.splice(index, 1);
+    }
+
     exibirNaTela() {
 
-            const resultado = document.querySelector("#resultado");
+        const resultado = document.querySelector("#resultado");
+        resultado.innerHTML = "";
 
-            resultado.innerHTML = "";
-            this.produtos.forEach(produto => {
-                resultado.innerHTML += `
-                <div>
-                    <p>Nome: ${produto.nome}</p>
-                    <p>Preço: R$${produto.preco}</p>
-                    <p>Categoria: ${produto.categoria}</p>
-                    <p>Desconto: ${produto.desconto}%</p>
-                    <p>Preço com desconto: R$${produto.precoComDesconto}</p>
-                </div>
-                `;
-            })
-        }
+        this.produtos.forEach((produto, index) => {
+
+            resultado.innerHTML += `
+        <div>
+            <p>Nome: ${produto.nome}</p>
+            <p>Preço: R$${produto.preco}</p>
+            <p>Categoria: ${produto.categoria}</p>
+            <p>Desconto: ${produto.desconto}%</p>
+            <p>Preço com desconto: R$${produto.precoComDesconto}</p>
+
+            <button onclick="excluirProduto(${index})">Excluir</button>
+        </div>
+        `;
+        });
+
+    }
 }
 
+
 const produtos = new Produtos();
+function excluirProduto(index) {
+    produtos.excluirProduto(index);
+    produtos.exibirNaTela();
+}
 const nome = document.querySelector("#nome");
 const preco = document.querySelector("#preco");
 const categoria = document.querySelector("#categoria");
 const desconto = document.querySelector("#desconto");
 const botaoCadastrar = document.querySelector("#botaoCadastrar");
 
-botaoCadastrar.addEventListener("click", function() {
+botaoCadastrar.addEventListener("click", function () {
 
     const produto = new Produto(nome.value, preco.value, categoria.value, desconto.value);
 
