@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapunzel — O Reino Encantado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="titulo">
+            <h1>Rapunzel</h1>
+            <p>Restaure os símbolos do reino antes que as lanternas se apaguem.</p>
+        </div>
+
+        <div class="placa contador">
+            <h2><span id="acertos">0</span>/6</h2>
+            <p>elementos</p>
+        </div>
+
+    </header>
+
+    <div class="instrucao">
+        Arraste cada elemento para o lugar certo.
+    </div>
+
+    <main>
+
+        <section class="cenario">
+
+            <img src="img/reino.png" class="fundo" alt="Reino da Rapunzel">
+
+            <div class="drop-zone sol" data-item="sol"></div>
+
+            <div class="drop-zone nuvem" data-item="nuvem"></div>
+
+            <div class="drop-zone pascal" data-item="pascal"></div>
+
+            <div class="drop-zone lanterna" data-item="lanterna"></div>
+
+            <div class="drop-zone flor" data-item="flor"></div>
+
+            <div class="drop-zone tiara" data-item="tiara"></div>
+
+        </section>
+
+    </main>
+
+    <section class="inventario">
+
+        <h3>Seus elementos</h3>
+
+        <div class="itens">
+
+            <img src="img/sol.png" id="sol" draggable="true" class="item">
+
+            <img src="img/nuvem.png" id="nuvem" draggable="true" class="item">
+
+            <img src="img/lanterna.png" id="lanterna" draggable="true" class="item">
+
+            <img src="img/largarto.png" id="pascal" draggable="true" class="item">
+
+            <img src="img/flor.png" id="flor" draggable="true" class="item">
+
+            <img src="img/tiara.png" id="tiara" draggable="true" class="item">
+
+        </div>
+
+    </section>
+
+</div>
+
+<div class="popup oculto" id="vitoria">
+
+    <div class="caixa">
+
+        <h2>✨ Você Ganhou!</h2>
+
+        <p>As lanternas iluminaram o reino outra vez.</p>
+
+        <button onclick="location.reload()">
+            Jogar novamente
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
