@@ -1,42 +1,28 @@
 // Abrir câmera quando clicar no botão
 document.getElementById("iniciar").addEventListener("click", function () {
-
     navigator.mediaDevices.getUserMedia({
         video: true
     })
-
     .then(function (stream) {
-
         var video = document.querySelector("#camera");
         video.srcObject = stream;
-
     })
-
     .catch(function () {
 
         alert("Não foi possível acessar a câmera.");
-
     });
-
 });
 
 // Obter localização
 navigator.geolocation.getCurrentPosition(
-
     function (posicao) {
-
         document.getElementById("latitude").textContent = "Latitude: " + posicao.coords.latitude;
-
         document.getElementById("longitude").textContent = "Longitude: " + posicao.coords.longitude;
-
         document.getElementById("precisao").textContent = "Precisão: " + posicao.coords.accuracy +   " metros";
-
     },
-
     function () {
         alert("Não foi possível obter a localização.");
     }
-
 );
 
 // Capturar foto e gerar comprovante
@@ -59,8 +45,7 @@ capturar.addEventListener("click", function () {
     let nascimento = document.getElementById("dataNascimento").value;
 
     document.getElementById("rNome").textContent = "Nome: " + nome;
-    document.getElementById("rNascimento").textContent =
-        "Data de nascimento: " + nascimento;
+    document.getElementById("rNascimento").textContent = "Data de nascimento: " + nascimento;
 
     document.getElementById("resultado").style.display = "block";
 
