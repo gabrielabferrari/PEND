@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Check-in</h1>
+        <p>Check-in com foto e localização.</p>
+
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <input type="date" id="dataNascimento" placeholder="Digite sua data de nascimento">
+
+        <video id="camera" autoplay></video>
+        <canvas id="canvas"></canvas>
+
+        <button id="iniciar">Abrir Câmera</button>
+        <button id="capturar">Capturar Check-in</button>
+
+        <div id="resultado">
+            <h3>Comprovante</h3>
+            <img id="foto" alt="Foto do check-in">
+
+            <p id="rNome">Nome:</p>
+            <p id="rNascimento">Data de nascimento:</p>
+            <p id="latitude">Latitude:</p>
+            <p id="longitude">Longitude:</p>
+            <p id="precisao">Precisão:</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
