@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB Atelier | Perfumes & Essências</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --vinho: #542638;
+            --vinho-escuro: #29151e;
+            --rose: #c18b98;
+            --rose-claro: #f8eef0;
+            --dourado: #c5a46d;
+            --creme: #fffaf6;
+            --texto: #382a2d;
+        }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+        body {
+            margin: 0;
+            background: var(--creme);
+            color: var(--texto);
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        .navbar { background: rgba(41, 21, 30, .97); }
+        .navbar-brand {
+            color: #fff !important;
+            font-family: Georgia, serif;
+            font-size: 1.55rem;
+            letter-spacing: .08em;
+        }
+        .brand-mark { color: var(--dourado); }
+        .navbar .nav-link { color: #f7e9ed; }
+        .navbar .nav-link:hover, .navbar .nav-link:focus { color: var(--dourado); }
+        .hero {
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(34, 15, 24, .88) 0%, rgba(34, 15, 24, .58) 52%, rgba(34, 15, 24, .12) 100%),
+                url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=85") center/cover;
+        }
+        .hero .eyebrow {
+            color: #e5c995;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            font-size: .78rem;
+            font-weight: 700;
+        }
+        .hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; }
+        .hero p { max-width: 530px; color: #f4e9eb; font-size: 1.1rem; }
+        .btn-perfume {
+            background: var(--dourado);
+            border: 1px solid var(--dourado);
+            color: #25161a;
+            font-weight: 700;
+            padding: .8rem 1.5rem;
+        }
+        .btn-perfume:hover { background: #dfc18a; border-color: #dfc18a; color: #25161a; }
+        .btn-outline-perfume { border: 1px solid var(--dourado); color: var(--dourado); }
+        .btn-outline-perfume:hover { background: var(--dourado); color: var(--vinho-escuro); }
+        .section-kicker { color: #9b6676; text-transform: uppercase; letter-spacing: .2em; font-size: .75rem; font-weight: 700; }
+        .section-title { color: var(--vinho); font-family: Georgia, "Times New Roman", serif; }
+        .intro-strip { background: var(--rose-claro); }
+        .product-card {
+            border: 1px solid #eee0e2;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 100%;
+            background: #fff;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 1rem 2rem rgba(84, 38, 56, .12); }
+        .product-img { height: 265px; width: 100%; object-fit: cover; background: #f4e9eb; }
+        .product-card .card-body { padding: 1.25rem; }
+        .product-type { color: #9b6676; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; }
+        .product-name { color: var(--vinho); font-family: Georgia, serif; }
+        .product-price { color: var(--vinho); font-size: 1.2rem; font-weight: 750; }
+        .btn-buy { background: var(--vinho); color: white; border: 1px solid var(--vinho); }
+        .btn-buy:hover { background: var(--vinho-escuro); color: white; }
+        .carousel-item img { height: 330px; object-fit: cover; filter: brightness(.72); }
+        .carousel-caption { bottom: 3rem; }
+        .carousel-caption h3 { font-family: Georgia, serif; }
+        .contact-section { background: var(--rose-claro); }
+        .form-control:focus { border-color: var(--rose); box-shadow: 0 0 0 .25rem rgba(193, 139, 152, .2); }
+        footer { background: var(--vinho-escuro); color: #f7e9ed; }
+        footer a { color: #e5c995; text-decoration: none; }
+        footer a:hover { color: white; }
+        .footer-brand { font-family: Georgia, serif; letter-spacing: .1em; }
+        @media (max-width: 575.98px) {
+            .hero { min-height: 500px; background-position: 60% center; }
+            .product-img { height: 230px; }
+            .carousel-item img { height: 270px; }
+            .carousel-caption { bottom: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho / Navbar: mantém a estrutura de cabeçalho do projeto original -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="GB Atelier - Início">
+                    <i class="bi bi-droplet-half brand-mark"></i>
+                    <span>GB <span class="brand-mark">ATELIER</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                    <a class="btn btn-outline-perfume btn-sm ms-lg-4 mt-3 mt-lg-0" href="#produtos">
+                        <i class="bi bi-bag-heart me-1"></i> Explorar fragrâncias
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6">
+                        <span class="eyebrow d-inline-block mb-3">Sua essência, sua assinatura</span>
+                        <h1 class="fw-bold mb-4">Perfumes que contam a sua história.</h1>
+                        <p class="mb-4">Descubra fragrâncias marcantes, delicadas e inesquecíveis. Encontre o aroma que combina com cada versão de você.</p>
+                        <a href="#produtos" class="btn btn-perfume btn-lg">Ver produtos <i class="bi bi-arrow-down-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-strip py-4">
+            <div class="container">
+                <div class="row g-3 text-center">
+                    <div class="col-12 col-md-4"><i class="bi bi-stars me-2"></i> Fragrâncias para todos os momentos</div>
+                    <div class="col-12 col-md-4"><i class="bi bi-gift me-2"></i> Opções perfeitas para presentear</div>
+                    <div class="col-12 col-md-4"><i class="bi bi-heart me-2"></i> Encontre sua assinatura olfativa</div>
+                </div>
+            </div>
+        </section>
+        <section class="container py-5" aria-label="Destaques da loja">
+            <div id="carouselDestaques" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Frascos de perfume em composição elegante">
+                        <div class="carousel-caption">
+                            <p class="text-uppercase small mb-1">Coleção especial</p>
+                            <h3 class="display-6 fw-semibold">Um aroma, infinitas memórias</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Perfume sofisticado em destaque">
+                        <div class="carousel-caption">
+                            <p class="text-uppercase small mb-1">Elegância em cada nota</p>
+                            <h3 class="display-6 fw-semibold">Seu próximo favorito está aqui</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Frasco de fragrância com iluminação suave">
+                        <div class="carousel-caption">
+                            <p class="text-uppercase small mb-1">Presenteie com significado</p>
+                            <h3 class="display-6 fw-semibold">Surpreenda com uma essência única</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="produtos" class="container py-5">
+            <div class="text-center mb-5">
+                <span class="section-kicker">Seleção GB Atelier</span>
+                <h2 class="section-title display-5 fw-semibold mt-2">Encontre sua fragrância</h2>
+                <p class="text-secondary mx-auto" style="max-width: 600px;">Uma seleção especial para acompanhar sua rotina, seus encontros e seus melhores momentos.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume âmbar Aurora">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Floral amadeirado</span>
+                            <h3 class="h5 product-name">Aurora</h3>
+                            <p class="text-secondary small">Notas suaves e luminosas para deixar sua marca.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 189,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Aurora">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume elegante Velvet">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Oriental sofisticado</span>
+                            <h3 class="h5 product-name">Velvet</h3>
+                            <p class="text-secondary small">Uma fragrância envolvente, intensa e elegante.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 219,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Velvet">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume floral Bloom">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Floral delicado</span>
+                            <h3 class="h5 product-name">Bloom</h3>
+                            <p class="text-secondary small">Leveza e frescor para iluminar os seus dias.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 159,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Bloom">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume intenso Noir">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Amadeirado intenso</span>
+                            <h3 class="h5 product-name">Noir</h3>
+                            <p class="text-secondary small">Personalidade marcante para ocasiões especiais.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 239,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Noir">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume fresco Brisa">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Cítrico fresco</span>
+                            <h3 class="h5 product-name">Brisa</h3>
+                            <p class="text-secondary small">Uma combinação fresca para acompanhar sua rotina.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 139,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Brisa">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=80" class="product-img" alt="Frasco de perfume adocicado Amora">
+                        <div class="card-body d-flex flex-column">
+                            <span class="product-type mb-2">Adocicado gourmand</span>
+                            <h3 class="h5 product-name">Amora</h3>
+                            <p class="text-secondary small">Notas doces e acolhedoras, com um toque moderno.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+                                <span class="product-price">R$ 179,90</span>
+                                <a class="btn btn-buy" href="#contato" aria-label="Comprar perfume Amora">Comprar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section py-5">
+            <div class="container py-3">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <span class="section-kicker">Vamos conversar</span>
+                        <h2 class="section-title display-5 fw-semibold mt-2">Encontre seu próximo perfume.</h2>
+                        <p class="text-secondary">Tem dúvidas ou quer ajuda para escolher uma fragrância? Envie uma mensagem para a GB Atelier.</p>
+                        <p class="mb-2"><i class="bi bi-envelope brand-mark me-2"></i> contato@gbatelier.com</p>
+                        <p><i class="bi bi-instagram brand-mark me-2"></i> @gb.atelier</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="bg-white p-4 p-md-5 rounded-4 shadow-sm" id="formContato">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Como podemos chamar você?" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="voce@exemplo.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-buy px-4">Enviar mensagem <i class="bi bi-send ms-2"></i></button>
+                            <div class="form-text mt-3">Demonstração acadêmica: o formulário exibe uma confirmação, mas ainda não envia dados para um servidor.</div>
+                            <div id="mensagemSucesso" class="alert alert-success mt-3 d-none" role="status">Mensagem preenchida! Esta é uma demonstração do formulário.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="footer-brand fs-5 mb-1"><i class="bi bi-droplet-half me-2"></i>GB ATELIER</div>
+                    <small class="text-white-50">Fragrâncias que revelam sua essência.</small>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#inicio" class="me-3">Início</a>
+                    <a href="#produtos" class="me-3">Produtos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+            <hr class="border-secondary my-3">
+            <p class="text-center text-white-50 small mb-0">&copy; 2026 GB Atelier. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("formContato").addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("mensagemSucesso").classList.remove("d-none");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
